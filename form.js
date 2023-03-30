@@ -36,3 +36,14 @@ number.addEventListener('input', function () {
     else
     numError.textContent = "Number is Incorrect";
 });
+
+//UC4
+const password = document.querySelector('#pwd');
+const pwdError = document.querySelector('.password-error');
+password.addEventListener('input', function () {
+    let pwdRegex = RegExp("^[0-9A-Za-z!@#$%^&*?<>]{8,}$");
+    if (pwdRegex.test(password.value))
+    pwdError.textContent = ""
+    else
+    pwdError.textContent = "password is Incorrect";
+});
