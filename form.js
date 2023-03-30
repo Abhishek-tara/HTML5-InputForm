@@ -1,3 +1,4 @@
+//UC1
 const text = document.querySelector('#text');
 const textError = document.querySelector('.text-error');
 text.addEventListener('input', function () {
@@ -13,3 +14,14 @@ const output = document.querySelector('.salary-output');
 salary.addEventListener('input', function () {
     output.textContent = salary.value;
 })
+
+//UC2
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input', function () {
+    let emailRegex = RegExp('^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$');
+    if (emailRegex.test(text.value))
+    emailError.textContent = ""
+    else
+    emailError.textContent = "Email is Incorrect";
+});
